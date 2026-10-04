@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Pallabi!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            overflow-x: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Main Greeting Card with Message Box Watermark Background */
+        .card {
+            background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), url('data:image/jpeg;base64,...') no-repeat center center;
+            background-size: cover;
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            padding: 45px 35px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: cardEntrance 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            margin: 20px 0;
+        }
+
+        @keyframes cardEntrance {
+            0% { transform: scale(0.4) translateY(50px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        /* 3D Stylish Happy Birthday with Reflection */
+        .birthday-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 50%, #ff0844 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 1px 0 #ccc,
+                         0 2px 0 #c9c9c9,
+                         0 3px 0 #bbb,
+                         0 4px 0 #b9b9b9,
+                         0 5px 0 #aaa,
+                         0 6px 1px rgba(0,0,0,.1),
+                         0 0 5px rgba(0,0,0,.1),
+                         0 1px 3px rgba(0,0,0,.3),
+                         0 3px 5px rgba(0,0,0,.2),
+                         0 5px 10px rgba(0,0,0,.25),
+                         0 10px 10px rgba(0,0,0,.2),
+                         0 20px 20px rgba(0,0,0,.15);
+            animation: floatHeading 3s ease-in-out infinite;
+        }
+
+        /* Reflection effect for all letters */
+        .birthday-heading::after {
+            content: 'HAPPY BIRTHDAY';
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 50%, #ff0844 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scaleY(-1);
+            opacity: 0.3;
+            filter: blur(1.5px);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+            pointer-events: none;
+        }
+
+        @keyframes floatHeading {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Wish text styling - Bold and Colorful */
+        .wish-section {
+            margin-bottom: 35px;
+            line-height: 1.9;
+        }
+
+        .wish-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #4a00e0, #8e2de2, #ff0844, #ffb199);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .name-highlight {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #f12711, #f5af19);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            margin: 0 4px;
+        }
+
+        .divider {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ff416c, transparent);
+            margin: 25px 0;
+        }
+
+        /* Professional Thank You Button */
+        button {
+            background: linear-gradient(135deg, #f72585 0%, #7209b7 100%);
+            color: white;
+            border: none;
+            padding: 16px 42px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(247, 37, 133, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            outline: none;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(114, 9, 183, 0.6);
+            background: linear-gradient(135deg, #7209b7 0%, #f72585 100%);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        /* Welcome Popup Animation */
+        .welcome-popup {
+            position: fixed;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #ff007f;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 22px;
+            border-radius: 35px;
+            box-shadow: 0 8px 25px rgba(255, 0, 127, 0.3);
+            pointer-events: none;
+            z-index: 999;
+            animation: floatUpAndFade 2.8s ease-out forwards;
+            white-space: nowrap;
+        }
+
+        @keyframes floatUpAndFade {
+            0% {
+                transform: translateY(0px) scale(0.5) rotate(-5deg);
+                opacity: 0;
+            }
+            20% {
+                transform: translateY(-50px) scale(1.15) rotate(5deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-280px) scale(1) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .birthday-heading {
+                font-size: 2.2rem;
+            }
+            .card {
+                padding: 30px 20px;
+            }
+            .wish-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Card / Message Box with Photo Watermark Background -->
+    <div class="card">
+        <h1 class="birthday-heading">Happy Birthday Pokili</h1>
+        
+        <div class="wish-section">
+            <p class="wish-text">
+                Happy Birthday My Dear friend <span class="name-highlight">Pallabi</span> ! May this special day of yours be filled with joy, laughter, and new success. May God fulfill all your dreams. Stay happy always, lots of love. 💖✨
+            </p>
+            <hr class="divider">
+        </div>
+
+        <button id="thankYouBtn">Thank You 💕</button>
+    </div>
+
+    <script>
+        const btn = document.getElementById('thankYouBtn');
+
+        btn.addEventListener('click', () => {
+            const totalElements = 30;
+
+            for (let i = 0; i < totalElements; i++) {
+                setTimeout(() => {
+                    createWelcomeMessage();
+                }, i * 50);
+            }
+        });
+
+        function createWelcomeMessage() {
+            const popup = document.createElement('div');
+            popup.classList.add('welcome-popup');
+            
+            popup.innerHTML = "Welcome 🥰🥰🥰🥰";
+
+            const randomX = Math.random() * (window.innerWidth - 200);
+            const randomY = window.innerHeight - 200 - (Math.random() * 100);
+
+            popup.style.left = randomX + 'px';
+            popup.style.top = randomY + 'px';
+
+            const duration = 2.2 + Math.random() * 1.5;
+            popup.style.animationDuration = duration + 's';
+
+            document.body.appendChild(popup);
+
+            setTimeout(() => {
+                popup.remove();
+            }, duration * 1000);
+        }
+    </script>
+</body>
+</html>
